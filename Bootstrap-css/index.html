@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Toko online | Fanceee</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-white navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../Bootstrap-css/Images/fanc.png" alt="" width="180" height="24">
+            </a>
+
+
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#produk">Produk</a>
+                        <a class="nav-link" href="#promo">Promo</a>
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Kontak</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- carousel -->
+    <div class="container mt-4 mb-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Bootstrap-css/Images/samsung.png" class="d-block " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Bootstrap-css/Images/laptop.png" class="d-block " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Bootstrap-css/Images/hp.jpg" class="d-block " alt="...">
+                </div>
+            </div>
+
+            <!-- tombol kiri kanan -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </div>
+
+    <!-- jumbotron -->
+
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container ">
+            <h1 class="display-1">Promo murah</h1>
+
+            <p class="lead">
+                This is a simple unit, a simple jumbotronstyle component for calling extra attentionto featured content or information.
+            </p>
+
+            <hr class="my-4">
+
+            <p>
+                It uses vitility classes for typoghrapy and spacing to space content out withinthe larger container
+            </p>
+
+            <a class="btn btn-outline-success btn-lg" href="#" role="button">Learn more</a>
+
+        </div>
+    </div>
+
+
+    <!-- card -->
+
+    <div class="container mt-5">
+        <div class="row" id="produk">
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card border border-success" style="width: 18rem;">
+                    <img src="Images/tablet.jpg" class=" card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Tablet murah</h5>
+                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card' s content.</p>
+                        <h5>Rp. 100.000</h5>
+                        <a href="# " class="btn btn-success mt-1">Buy Now!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-center mt-1">
+                <div class="card border border-success" style="width: 18rem;">
+                    <img src="Images/laptop.png" class=" card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Laptop murah</h5>
+                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card' s content.</p>
+                        <h5>Rp. 100.000</h5>
+                        <a href="# " class="btn btn-success mt-1">Buy Now!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-center mt-1">
+                <div class="card border border-success" style="width: 18rem;">
+                    <img src="Images/tv.jpg" class=" card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">TV murah</h5>
+                        <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card' s content.</p>
+                        <h5>Rp. 100.000</h5>
+                        <a href="# " class="btn btn-success mt-1">Buy Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tabel -->
+    <div class="container" id="promo">
+        <div class="row text-center bg-success text-light mt-5 mb-5 me-5">
+            <div class="col">
+                <h1>Diskon 80%</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 ms-auto">
+                <img src="Images/laptop.png" width="450">
+            </div>
+            <div class="col-lg-8 ">
+                <table class="table table-borderless ">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Laptop</th>
+                            <th scope="col">Diskon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Lenovo</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Acer</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>HP</td>
+                            <td>65%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="jumbotron jumbotron-fluid bg-success text-light" id="tentang">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p><strong>Fance Satria</strong>
+                        <br> Sidoarjo Jawa Timur <br> Indonesia 61253</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <p><strong>Pembayaran</strong> <br> BRI<br> 097654</p>
+                    <br> BCA<br> 4567434</p>
+                    <br> Mandiri<br> 7654558</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <p><strong>Tentang</strong>
+                        <br> PT. Fance Jaya didirikan pada tahun 1870</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="container">
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Form Kontak</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <dic class="col">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Anda">
+
+                                </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Alamat</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alamat " required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Kota</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asal Kota" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Kode Pos</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Kode pos" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Optional JavaScript; choose one of the two! -->
+
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
+
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js " integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js " integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/ " crossorigin="anonymous "></script>
+    -->
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js " integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js " integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/ " crossorigin="anonymous "></script>
+            -->
+</body>
+
+</html>

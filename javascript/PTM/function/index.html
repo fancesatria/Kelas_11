@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar-Function</title>
+</head>
+<body>
+    <form action="">
+        Tanggal : <input type="number" placeholder="Masukkan Tanggal" id="tgl"><br>
+        Bulan : <input type="number" placeholder="Masukkan Bulan" id="bln"><br>
+    </form>
+    <button onclick="baru()">Klik</button>
+    <script>
+        function tampil(){
+            alert("belajar function");
+        }
+
+        function kali(){
+            let a = 5;
+            let b = 3;
+            let c = a*b;
+            alert(c);
+        }
+
+        function kaliParam(a, b){
+            let c = a*b;
+            alert(c);
+        }
+
+        function zodiak(tgl,bln){
+            
+            if ((tgl >= 21 && tgl <= 31 && bln ==3) || (tgl >= 1 && tgl <= 4 && bln == 4)){
+                alert('Aries');
+
+            } else if ((tgl >= 20 && tgl <= 30 && bln == 4) || (tgl >= 1 && tgl <= 20 && bln == 5)) {
+                alert('Taurus');
+
+            } else if ((tgl >= 20 && tgl <= 31 && bln == 5) || (tgl >= 1 && tgl <= 20 && bln == 6)) {
+                alert('Gemini');
+
+            } else if ((tgl >= 21 && tgl <= 30 && bln == 6) || (tgl >= 1 && tgl <= 22 && bln == 7)) {
+                alert('Cancer');
+
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 7) || (tgl >= 1 && tgl <= 22 && bln == 8)) {
+                alert('Leo');
+                
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 8) || (tgl >= 1 && tgl <= 22 && bln == 9)) {
+                alert('Virgo');
+                
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 9) || (tgl >= 1 && tgl <= 22 && bln == 10)) {
+                alert('Libra');
+                
+            } else if ((tgl >= 23 && tgl <= 30 && bln == 10) || (tgl >= 1 && tgl <= 21 && bln == 11)) {
+                alert('Scorpius');
+                
+            } else if ((tgl >= 22 && tgl <= 30 && bln == 11) || (tgl >= 1 && tgl <= 21 && bln == 12)) {
+                alert('Sagitarius');
+                
+            } else if ((tgl >= 22 && tgl <= 31 && bln == 12) || (tgl >= 1 && tgl <= 19 && bln == 1)) {
+                alert('Capricorn');
+                
+            } else if ((tgl >= 20 && tgl <= 31 && bln == 1) || (tgl >= 1 && tgl <= 18 && bln == 2)) {
+                alert('Aquarius');
+                
+            } else if ((tgl >= 19 && tgl <= 28 && bln == 2) || (tgl >= 1 && tgl <= 20 && bln == 3)) {
+                alert('Pisces');
+                
+            } else {
+                alert('Tanggal atau bulan tidak valid');
+            }
+        }
+
+        function zodSec(){
+            let tanggal = document.querySelector("#tgl").value;
+            let bulan = document.querySelector("#bln").value;
+            
+            zodiak(tanggal,bulan);
+            
+        }
+
+        //Arrow function
+        let isi = () => {
+                alert("belajar arrow function");
+            }
+        let bagi = (a,b) => {
+                let c = a/b;
+                alert(c);
+            }
+        let zodiakNew = (tgl,bln) => {
+            if ((tgl >= 21 && tgl <= 31 && bln ==3) || (tgl >= 1 && tgl <= 4 && bln == 4)){
+                alert('Aries');
+
+            } else if ((tgl >= 20 && tgl <= 30 && bln == 4) || (tgl >= 1 && tgl <= 20 && bln == 5)) {
+                alert('Taurus');
+
+            } else if ((tgl >= 20 && tgl <= 31 && bln == 5) || (tgl >= 1 && tgl <= 20 && bln == 6)) {
+                alert('Gemini');
+
+            } else if ((tgl >= 21 && tgl <= 30 && bln == 6) || (tgl >= 1 && tgl <= 22 && bln == 7)) {
+                alert('Cancer');
+
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 7) || (tgl >= 1 && tgl <= 22 && bln == 8)) {
+                alert('Leo');
+                
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 8) || (tgl >= 1 && tgl <= 22 && bln == 9)) {
+                alert('Virgo');
+                
+            } else if ((tgl >= 23 && tgl <= 31 && bln == 9) || (tgl >= 1 && tgl <= 22 && bln == 10)) {
+                alert('Libra');
+                
+            } else if ((tgl >= 23 && tgl <= 30 && bln == 10) || (tgl >= 1 && tgl <= 21 && bln == 11)) {
+                alert('Scorpius');
+                
+            } else if ((tgl >= 22 && tgl <= 30 && bln == 11) || (tgl >= 1 && tgl <= 21 && bln == 12)) {
+                alert('Sagitarius');
+                
+            } else if ((tgl >= 22 && tgl <= 31 && bln == 12) || (tgl >= 1 && tgl <= 19 && bln == 1)) {
+                alert('Capricorn');
+                
+            } else if ((tgl >= 20 && tgl <= 31 && bln == 1) || (tgl >= 1 && tgl <= 18 && bln == 2)) {
+                alert('Aquarius');
+                
+            } else if ((tgl >= 19 && tgl <= 28 && bln == 2) || (tgl >= 1 && tgl <= 20 && bln == 3)) {
+                alert('Pisces');
+                
+            } else {
+                alert('Tanggal atau bulan tidak valid');
+            }
+        }
+        function baru(){
+            
+            zodiakNew(4,5);
+        }
+    </script>
+</body>
+</html>

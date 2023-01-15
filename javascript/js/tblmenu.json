@@ -1,0 +1,21 @@
+[
+    {
+        "idmenu" : 16,
+        "idkategori" : 33,
+        "menu" : "Jeruk Mandarin",
+        "harga" : 4000,
+        "warna" : ["merah", "biru", "hijau"],
+        "stok" : true,
+        "keterangan" : null
+    },
+
+    {
+        "idmenu" : 15,
+        "idkategori" : 33,
+        "menu" : "Melon Konoha",
+        "harga" : 4000,
+        "warna" : ["merah", "hijau"],
+        "stok" : false,
+        "keterangan" : null
+    }
+]

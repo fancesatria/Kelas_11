@@ -1,0 +1,5 @@
+1. instal react js
+2. instal react-router-dom
+3. instal axios
+4. instal react bootstrap
+5. instal react-hook-form

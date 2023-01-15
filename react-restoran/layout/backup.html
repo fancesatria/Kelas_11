@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Axios</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous"
+    >
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div>
+                <h1 class="display-4">BELAJAR AXIOS</h1>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" id="get">Get</button>
+                <button type="button" class="btn btn-secondary" id="show">Show</button>
+                <button type="button" class="btn btn-success" id="post">Post</button>
+                <button type="button" class="btn btn-danger" id="delete">Delete</button>
+                <button type="button" class="btn btn-dark" id="update">Update</button>
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row">
+            <div id="out">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Buat codingn program harus di dlm tag script -->
+    <script>
+        const url = "http://localhost:8000/api";
+        let token = "oDXSrK1W7Qj489IjIm4AYRNSCxmbS43O384eF2RM";
+        // axios({
+        //     method:'get',
+        //     url:url,
+        //     headers:{'api_token':token}
+        // }).then(res=>console.log(res));
+
+        const link = axios.create({
+            baseURL: url,
+            headers: {
+                'api_token':token
+            }
+        });
+
+        //menampilkan semua data
+        function get() {
+            link.get('/pelanggan').then(res=>{
+                let tampil = `<table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Pelanggan</th>
+                        <th>Alamat</th>
+                        <th>Telp</th>
+                    </tr>
+                `;
+                res.data.forEach(el=>{
+                    tampil += `<tr>
+                        <td>${el.idpelanggan}</td>
+                        <td>${el.pelanggan}</td>
+                        <td>${el.alamat}</td>
+                        <td>${el.telp}</td>
+                    </tr>`
+                })
+                tampil += `</table>`;
+                document.querySelector("#out").innerHTML=tampil;
+            });
+        }
+
+        //menampilkan sebaris data\
+        function show() {
+            let id = 77;
+            link.get('/pelanggan/'+id).then(res=>{
+                let tampil = `<table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Pelanggan</th>
+                        <th>Alamat</th>
+                        <th>Telp</th>
+                    </tr>
+                `;
+                res.data.forEach(el=>{
+                    tampil += `<tr>
+                        <td>${el.idpelanggan}</td>
+                        <td>${el.pelanggan}</td>
+                        <td>${el.alamat}</td>
+                        <td>${el.telp}</td>
+                    </tr>`
+                })
+                tampil += `</table>`;
+                document.querySelector("#out").innerHTML=tampil;
+            })
+        }
+
+        //menambah data
+        function post() {
+            let data = {
+                pelanggan:'fance axios',
+                alamat: 'sedati axios',
+                telp: '09999999999'
+            }
+
+            link.post('/pelanggan', data).then(res=>{
+                console.log(res);
+                let tampil = `<h1 class="alert alert-success" role="alert">${res.data.pesan}</h1>`;
+                document.querySelector("#out").innerHTML=tampil;
+                });
+        }
+
+        //menghapus data
+        function hapus() {
+            let id = 105;
+
+            link.delete('/pelanggan/'+id).then(res=>{
+                console.log(res);
+                let tampil = `<h1 class="alert alert-danger" role="alert">${res.data.pesan}</h1>`;
+                document.querySelector("#out").innerHTML=tampil;
+            });
+        }
+
+        //update data
+        function edit() {  
+            let id = 102;
+            let data = {
+                pelanggan: 'Update fance axios',
+                alamat: 'www sedati axios new',
+                telp: '555555554'
+            };
+
+            link.put('/pelanggan/'+id, data).then(res=>{
+                console.log(res);
+                let tampil = `<h1 class="alert alert-dark" role="alert">${res.data.pesan}</h1>`;
+                document.querySelector("#out").innerHTML=tampil;
+            })
+        }
+
+        document.querySelector("#get").addEventListener('click', get);
+        document.querySelector("#show").addEventListener('click', show);
+        document.querySelector("#post").addEventListener('click', post);
+        document.querySelector("#show").addEventListener('click', show);
+        document.querySelector("#delete").addEventListener('click',hapus);
+        document.querySelector("#update").addEventListener('click', edit);
+    </script>
+
+</body>
+</html>

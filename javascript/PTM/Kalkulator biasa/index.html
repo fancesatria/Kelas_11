@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-Sinau Kalkulator With jQuery-</title>
+    <script src="kalkulator.js" async></script>
+    <script src="jquery.js" async></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="kotak">
+        <form name="kalku">
+
+            <input type="number" name="bil1" id="bil1" placeholder="Masukkan bilangan 1"/><br />
+            <input type="number" name="bil2" id="bil2" placeholder="Masukkan bilangan 2"><br />
+            
+            <input type="button" value="+" onclick="tambah()" />
+            <input type="button" value="-" onclick="kurang()" />
+            <input type="button" value="x" onclick="kali()" />
+            <input type="button" id="bagi" value="/" > 
+            <br />
+    
+            <input type="button" value="Hapus" onclick="hapus()" /> <br />
+            <input type="button" id="" name="" value="halo" onclick="halo()">
+            
+            <p>Hasil :</p>
+            <h1 id="hasil" >
+    
+            </h1>
+    
+        </form>
+    </div>
+</body>
+</html>

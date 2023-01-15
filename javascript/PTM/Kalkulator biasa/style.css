@@ -1,0 +1,16 @@
+.kotak {
+    background-color: blueviolet;
+    width: 200px;
+    height: 180px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}

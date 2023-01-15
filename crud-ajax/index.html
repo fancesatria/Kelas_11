@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD WITH AJAX</title>
+</head>
+<body>
+    <h1>CRUD WITH AJAX</h1>
+    <hr>
+    <br>
+    <table border="1" style="width: 70%">
+        <thead>
+            <td>No</td>
+            <td>Id Kategori</td>
+            <td>Menu</td>
+            <td>Gambar</td>
+            <td>Edit</td>
+            <td style="text-align: center;">Option</td>
+        </thead>
+            
+        <tbody class="targetData">
+
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <h2>Form Insert</h2>
+    <table 
+        <tr><td>Id Menu </td> <td><input type="text" class="txt-idmenu" disabled></td></tr>
+        <tr><td>Id Kategori </td> <td><input type="text" class="txt-idkategori"></td></tr>
+        <tr><td>Nama Menu </td> <td><input type="text" class="txt-menu" ></td></tr>
+        <tr><td>Gambar </td> <td><input type="text" class="txt-gambar" ></td></tr>
+        <tr><td>Harga </td> <td><input type="number" class="txt-harga"></td></tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="btn-tambah">Tambah</button>
+                <button class="btn-ubah" style="display: none">Simpan Perubahan</button>
+                <button class="btn-batal" style="display: none">Batal</button>
+            </td>
+        </tr>
+    </table>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+alert("Belajar javascript");
